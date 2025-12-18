@@ -1,24 +1,24 @@
 # elizaos-plugin-mefs
 
-elizaos-plugin-mefs是一款专为elizaos代理提供去中心化存储功能的插件。该插件允许代理和去中心化存储网络——MEFS进行交互，提供文件上传和检索的功能。
+elizaos-plugin-mefs is a plugin designed to provide decentralized storage functionality for elizaos agents. This plugin allows agents to interact with MEFS, a decentralized storage network, providing file upload and retrieval capabilities.
 
-## 安装
+## Installation
 
-1. 通过bun进行安装
+1. Install via bun
 
 ```bash
 bun install @elizaos/plugin-mefs
 ```
 
-2. 通过elizaos cli进行安装
+2. Install via elizaos cli
 
 ```bash
 elizaos plugins add @elizaos/plugin-mefs
 ```
 
-## 配置
+## Configuration
 
-1. 将插件添加到elizaos代理角色中：
+1. Add the plugin to your elizaos agent character:
 
    ```js
    // agent/src/character.ts
@@ -32,31 +32,31 @@ elizaos plugins add @elizaos/plugin-mefs
    };
    ```
 
-2. 设置环境变量，将下面的环境变量添加到.env文件中：
+2. Set environment variables by adding the following to your .env file:
 
    ```
    MEFS_PRIVATE_KEY=<YOUR-PRIVATE-KEY>
    ```
 
-   将YOUR-PRIVATE-KEY替换为您的EVM私钥。您可以使用[MetaMask](https://metamask.io/)，[Okx Wallet](https://web3.okx.com/)等EVM钱包创建钱包，并获取您的私钥。
+   Replace YOUR-PRIVATE-KEY with your EVM private key. You can use EVM wallets such as [MetaMask](https://metamask.io/) or [Okx Wallet](https://web3.okx.com/) to create a wallet and obtain your private key.
 
 ## Build And Run
 
-从项目的根目录构建并启动项目
+Build and start the project from the project root directory
 
 ```bash
 elizaos start
 ```
 
-您现在可以在浏览器中打开[http://localhost:3000](http://localhost:3000/)，从而访问专属于您的AI代理
+You can now open [http://localhost:3000](http://localhost:3000/) in your browser to access your dedicated AI agent
 
 ## Actions
 
 ### STORAGE_UPLOAD
 
-当用户想要将文件或者AI代理生成的回答上传到Storacha分布式存储网络时，请使用此操作。
+Use this action when users want to upload files or AI agent-generated responses to the Storacha decentralized storage network.
 
-**别名**
+**Aliases**
 
 - `UPLOAD`
 - `STORE`
@@ -66,9 +66,9 @@ elizaos start
 
 ### STORAGE_RETRIEVE
 
-当用户要求您根据 CID 从 Storacha 网络检索文件时，请使用此操作。
+Use this action when users request you to retrieve files from the Storacha network based on CID.
 
-**别名**
+**Aliases**
 
 - `RETRIEVE`
 - `RETRIEVE_FILE`
